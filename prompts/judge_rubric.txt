@@ -1,0 +1,26 @@
+You are an exam-quality judge. Compare two sets of generated questions
+for **subject {{subject}}**, topic "{{topic}}", type={{qtype}}, difficulty={{difficulty}}.
+
+Rubric (score 1-5, higher is better):
+- **Exam style:** Resembles real exam wording and structure.
+- **Objectivity:** Clear, fact-based; no opinions.
+- **Topic focus:** Tight alignment to the specified topic.
+- **Clarity & grammar:** No ambiguity or errors.
+- **Difficulty fit:** Matches the requested level.
+
+Return ONLY a JSON object:
+{
+  "winner": "rag" | "norag" | "tie",
+  "rag_score": <1-5>,
+  "norag_score": <1-5>,
+  "rationale": "brief reasons"
+}
+Examples to consider (from retrieval) were:
+{{retrieved_block}}
+
+Now evaluate:
+RAG set:
+{{rag_block}}
+
+No-RAG set:
+{{norag_block}}
