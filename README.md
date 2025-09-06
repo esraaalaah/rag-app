@@ -145,3 +145,6 @@ rag-qg/
 - **Dynamic RAG**: adaptive retrieval size based on similarity.
 - **Cache-Augmented Generation (CAG)**: reuse previous generations for identical params.
 - **Context-Aware Generation**: inject meta + history context into prompts to avoid duplicates and stay on-topic.
+
+
+

@@ -8,3 +8,4 @@ sentence-transformers>=3.0.1
 numpy>=1.26.4
 scikit-learn>=1.4.2
 streamlit>=1.36.0
+evaluate==0.4.5
