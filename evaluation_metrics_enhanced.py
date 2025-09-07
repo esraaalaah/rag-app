@@ -42,7 +42,8 @@ model_names = {
 # ============================
 # 2. Load Dataset
 # ============================
-dataset = load_dataset("bigbio/sciq", "sciq_source")["test"]
+dataset = load_dataset("sciq")["test"]
+dataset = dataset.rename_column("correct_answer", "reference")
 
 # Ensure gold answers are labeled "reference"
 if "reference" not in dataset.column_names:
@@ -122,3 +123,4 @@ plt.savefig("evaluation_scores.png")
 plt.show()
 
 print("\n📊 Visualization saved as evaluation_scores.png")
+print("\n📊 Final Results:\n", results_df)
